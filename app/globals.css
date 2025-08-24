@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/nunito/NunitoSans-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/nunito/NunitoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/nunito/NunitoSans-Black.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/nunito/NunitoSans-SemiBold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/nunito/NunitoSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/nunito/NunitoSans-NunitoSans-ExtraBold') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'oswald';
+  src: url('/oswald/Oswald-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'oswald';
+  src: url('/oswald/Oswald-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'oswald';
+  src: url('/oswald/Oswald-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'oswald';
+  src: url('/oswald/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+ /* Customize scrollbar for Webkit-based browsers */
+[data-scroll-container]::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-scroll-container]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-scroll-container]::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* light gray to contrast black background */
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+/* For Firefox */
+[data-scroll-container] {
+  scrollbar-color: #ccc transparent;
+  scrollbar-width: thin;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ 
+
+/* .img1 {
+  top: -40px;
+  left: -60px;
+  transform: rotate(-12deg);
+}
+
+.img2 {
+  top: 20%;
+  left: 10%;
+  transform: rotate(8deg);
+}
+
+.img3 {
+  top: 10%;
+  right: 12%;
+  transform: rotate(-6deg);
+}
+
+.img4 {
+  bottom: 10%;
+  right: 0;
+  transform: rotate(10deg);
+} */

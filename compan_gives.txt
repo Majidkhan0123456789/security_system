@@ -1,0 +1,70 @@
+"use client";
+import { motion } from "framer-motion";
+
+export default function WarrantySection() {
+  // Animation variant for sliding in from left
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "tween",
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  return (
+    <section className="bg-[#F9F7F7] md:px-8 px-5 lg:px-14 lg:py-12 md:py-10 py-5">
+      <div className="py-8">
+        <motion.h1 variants={slideInLeft} initial="hidden" whileInView="show"
+         viewport={{ once: true, amount: 0.5 }} className="md:text-2xl text-lg lg:text-3xl xl:text-4xl font-light font-oswald py-4">
+          We are a highly specialized company focused on technical fields and
+          modern electronic systems.
+        </motion.h1>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3 md:gap-6"> {[
+          
+          {
+            title: "Minimum period is one (1) year Warranty",
+            desc: `SSS Co. is obliged to warrant all supplied equipment/devices for any
+            possible factory defect/s excluding damages caused by misuse and
+            force majeure.`,
+          },
+          {
+            title: "On-line support @24/7",
+            desc: `SSS Co. wishes every customer to be hassle-free by providing them a
+            reliable after sales support. We also offers maintenance and upgrade
+            scheme for our installed systems.`,
+          },
+          {
+            title: "Individual approach",
+            desc: `It allows individuals, entrepreneurs and companies the opportunity
+            to obtain everything that will provide an atmosphere of comfort,
+            safety and security residential locations, work or public places.`,
+          },
+          {
+            title: "Modern equipment",
+            desc: `Spare parts availability will be up to ten (10) years prior to the
+            discontinuation of every product that SSS Co. has been dealt with.
+            An excellent services that clients have been aspiring from such
+            contractor like us.`,
+          },
+        ].map((item, index) => (
+          <div key={index} className="bg-[#080808] p-6 rounded shadow">
+            <div className="flex items-center gap-3 py-4">
+              <div className="w-4 h-4 border-2 border-cyan-500"></div>
+              <h2
+                className="text-white md:text-lg text-base lg:text-xl xl:text-2xl font-light font-oswald"> {item.title}
+              </h2>
+            </div>
+            <p className="text-white text-base font-oswald">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
